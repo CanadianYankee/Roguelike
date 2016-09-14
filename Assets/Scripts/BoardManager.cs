@@ -55,7 +55,7 @@ public class BoardManager : MonoBehaviour
 			for(int y = -1; y < rows + 1; y++)
 			{
 				GameObject toInstantiate = (x == -1 || x == columns || y == -1 || y == rows) ?
-					outerWallTiles[Random.range(0, outerWallTiles.Length)] :
+					outerWallTiles[Random.Range(0, outerWallTiles.Length)] :
 					floorTiles[Random.Range(0, floorTiles.Length)];
 
 				GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
